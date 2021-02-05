@@ -58,7 +58,7 @@ struct Queue *delQ(struct Queue *q) {
     return q;
 }
 
-int front(struct Queue *q) {
+Element front(struct Queue *q) {
     if (isEmptyQ(q)) {
         printf("Error! Queue is empty!\n");
         exit(1);
@@ -70,19 +70,19 @@ int lengthQ(struct Queue *q) {
     return q->count;
 }
 
-void printQ(struct Queue *q) {
-    if (isEmptyQ(q)) {
-        printf("Error! Queue is empty!\n");
-        exit(1);
-    }
+// void printQ(struct Queue *q) {
+//     if (isEmptyQ(q)) {
+//         printf("Error! Queue is empty!\n");
+//         exit(1);
+//     }
 
-    struct node *ptr = q->head;
-	printf("\n[ ");
-	// start from the beginning
-	while (ptr != NULL)
-	{
-		printf("%d, ", ptr->element);
-		ptr = ptr->next;
-	}
-	printf("]\n");
-}
+//     struct node *ptr = q->head;
+// 	printf("\n[ ");
+// 	// start from the beginning
+// 	while (ptr != NULL)
+// 	{
+// 		printf("%d, ", ptr->element);
+// 		ptr = ptr->next;
+// 	}
+// 	printf("]\n");
+// }

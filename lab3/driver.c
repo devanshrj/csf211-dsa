@@ -1,6 +1,6 @@
 /* Driver for Queue */
 
-#include "que.h"
+#include "./que.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     while (!feof(fileptr))
     {
         // read the next element and store into the temp variable.
-        int temp;
+        Element temp;
         fscanf(fileptr, "%d ", &temp);
         // printf("Element: %d\n", temp);
         // insert temp into the linked list.

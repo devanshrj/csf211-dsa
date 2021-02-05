@@ -1,3 +1,5 @@
 /* Element Header */
 
-typedef int Element;
+#include "./Task.h"
+
+typedef Task Element;
