@@ -5,7 +5,7 @@
 
 // structure definitions
 /* structure of a Multi Queue
-mq.[i] will have ith priority queue */
+mq.[i] will have ith priority queue (index 0 will be empty) */
 typedef struct
 {
     struct Queue *list;

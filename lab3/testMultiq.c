@@ -43,6 +43,7 @@ int main(int argc, char *argv[]) {
     // start timer
     gettimeofday(&t1, NULL);
 
+    printf("Loading data...\n");
     MultiQ mq = loadData(fileptr);
 
     // stop timer
@@ -51,13 +52,17 @@ int main(int argc, char *argv[]) {
     // compute and print the elapsed time in millisec
     elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;
     elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;
-    printf("Total time for loading data is %fms.\n", elapsedTime);
+    printf("\nTotal time for loading data is %fms.\n", elapsedTime);
+
+    for (int i = 1; i < 11; i++) {
+        printf("Size of queue with priority %d: %d\n", i, sizeMQbyPriority(mq, i));
+    }
 
     // deletion
     // start timer
     gettimeofday(&t1, NULL);
 
-    int del = 5;
+    int del = 10;
     mq = testDel(mq, del);
 
     // stop timer
@@ -66,5 +71,13 @@ int main(int argc, char *argv[]) {
     // compute and print the elapsed time in millisec
     elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;
     elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;
-    printf("Total time for deleting %d tasks is %fms.\n", del, elapsedTime);
+    printf("\nTotal time for deleting %d tasks is %fms.\n", del, elapsedTime);
+
+    for (int i = 1; i < 11; i++) {
+        printf("Size of queue with priority %d: %d\n", i, sizeMQbyPriority(mq, i));
+    }
+    
+    printf("\nSize of mq: %d\n", sizeMQ(mq));
+    printf("Is the multi queue empty? %d\n", isEmptyMQ(mq));
+    fclose(fileptr);
 }

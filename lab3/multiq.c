@@ -22,6 +22,7 @@ MultiQ addMQ(MultiQ mq, Task t) {
 }
 
 Task nextMQ(MultiQ mq) {
+    // priority 1 is lowest priority
     for (int i = mq.len; i >= 1; i--) {
         if (lengthQ(&mq.list[i])) {
             return front(&mq.list[i]);
@@ -34,6 +35,7 @@ Task nextMQ(MultiQ mq) {
 }
 
 MultiQ delNextMQ(MultiQ mq) {
+    // priority 1 is lowest priority
     for (int i = mq.len; i >= 1; i--) {
         if (lengthQ(&mq.list[i])) {
             mq.list[i] = *delQ(&mq.list[i]);
@@ -47,11 +49,8 @@ MultiQ delNextMQ(MultiQ mq) {
 }
 
 bool isEmptyMQ(MultiQ mq) {
-    for (int i = mq.len; i >= 1; i--) {
-        if (!isEmptyQ(&mq.list[i])) {
-            return false;
-        }
-    }
+    if (sizeMQ(mq))
+        return false;
     return true;
 }
 
