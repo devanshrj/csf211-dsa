@@ -1,5 +1,6 @@
 /* Header for Memory Allocation */
 
+#include <stdio.h>
 #include <stdlib.h>
 
 /* procedure for memory allocation */

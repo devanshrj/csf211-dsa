@@ -1,8 +1,6 @@
 /* Exercise 2: Heap space */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "./memory.h"
+#include "memory.h"
 
 /* 
 (c) Heap space is used to dynamically allocate memory using malloc().
@@ -41,7 +39,7 @@ void printSize() {
     printf("Size of heap: %lld\n", totalSize);
 }
 
-int main() {
+void testMemory() {
     int *arr, M;
     int upper = 25000, lower = 10000;
 
