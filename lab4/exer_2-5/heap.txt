@@ -1,0 +1,7 @@
+Number of elements: 1000000
+Heap space used by createList(): 16000016
+
+Total time for detection of cyclic is 9.558000 ms.
+Detected Cyclic.
+
+Heap space after makeCircular(): 512
