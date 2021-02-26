@@ -1,6 +1,6 @@
 /* Implementation of insertion procedures */
 
-#include "insertion.h"
+#include "insertionSort.h"
 
 void insertInOrder(CreditCard* card_arr, CreditCard new_card, int n) {
     CreditCard card = new_card;

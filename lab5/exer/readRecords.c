@@ -1,6 +1,6 @@
 /* Read records implementation */
 
-#include "records.h"
+#include "readRecords.h"
 
 CreditCard* readRecords(CreditCard* card_arr, char* filename, int* final_size) {
     int size = 5;

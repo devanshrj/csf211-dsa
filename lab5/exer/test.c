@@ -1,8 +1,8 @@
 /* Test procedures */
 
-#include "records.h"
-#include "measure.h"
-#include "insertion.h"
+#include "readRecords.h"
+#include "measureTimeAndSpace.h"
+#include "insertionSort.h"
 
 void printR(CreditCard card) {
     printf("card no: %llu\n", card.card_no);

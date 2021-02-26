@@ -2,8 +2,8 @@
 
 #include <string.h>
 #include <sys/time.h>
-#include "records.h"
-#include "insertion.h"
+#include "readRecords.h"
+#include "insertionSort.h"
 
 /* Procedure for measuring the time taken to read records from file "filename" */
 void recordTime(char* filename, char* output);

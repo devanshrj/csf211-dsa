@@ -1,6 +1,6 @@
 /* Implementations of measurement functions */
 
-#include "measure.h"
+#include "measureTimeAndSpace.h"
 
 void insertComp(int n) {
     // filenames for measurement outputs
