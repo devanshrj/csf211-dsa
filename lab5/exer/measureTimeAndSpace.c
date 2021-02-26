@@ -4,6 +4,7 @@
 
 void insertComp(int n) {
     // filenames for measurement outputs
+    char* read = "readTime.txt";
     char* time = "insertionTime.txt";
     char* space = "insertionSpace.txt";
     char input[15];
@@ -16,7 +17,8 @@ void insertComp(int n) {
         sprintf(check_str, "%d", check);
         strcat(input, check_str);
 
-        printf("Performing time and space measurement on input file %s...\n", input);
+        printf("Performing time and space measurements on input file %s...\n", input);
+        recordTime(input, read);
         insertionTime(input, time);
         insertionSpace(input, space);
     }
@@ -71,7 +73,7 @@ void insertionSpace(char* filename, char* output) {
     FILE *f = fopen(output, "a");
     insertionSort(card_arr, size);
 
-    fprintf(f, "Number of elements: %d;      Top of stack: %llu;      Bottom of stack: %llu;      Space used: %llu\n", 
+    fprintf(f, "Number of elements: %d;      Top of stack: %p;      Bottom of stack: %p;      Space used: %llu\n", 
     size, top_stack, &bottom_stack, (unsigned long long)&bottom_stack-(unsigned long long)top_stack);
 
     fclose(f);

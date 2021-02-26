@@ -1,4 +1,5 @@
-Number of elements: 10;      Top of stack: 140732665995620;      Bottom of stack: 140732665996632;      Space used: 1012
-Number of elements: 100;      Top of stack: 140732665986980;      Bottom of stack: 140732665996632;      Space used: 9652
-Number of elements: 1000;      Top of stack: 140732665900580;      Bottom of stack: 140732665996632;      Space used: 96052
-Number of elements: 10000;      Top of stack: 140732665036580;      Bottom of stack: 140732665996632;      Space used: 960052
+Number of elements: 10;      Top of stack: 0x7ffee94f7144;      Bottom of stack: 0x7ffee94f7538;      Space used: 1012
+Number of elements: 100;      Top of stack: 0x7ffee94f4f84;      Bottom of stack: 0x7ffee94f7538;      Space used: 9652
+Number of elements: 1000;      Top of stack: 0x7ffee94dfe04;      Bottom of stack: 0x7ffee94f7538;      Space used: 96052
+Number of elements: 10000;      Top of stack: 0x7ffee940cf04;      Bottom of stack: 0x7ffee94f7538;      Space used: 960052
+Number of elements: 100000;      Top of stack: 0x7ffee8bcf904;      Bottom of stack: 0x7ffee94f7538;      Space used: 9600052
