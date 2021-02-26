@@ -6,7 +6,8 @@ CreditCard* readRecords(CreditCard* card_arr, char* filename, int* final_size) {
     int size = 5;
 
     // create a new card array
-    card_arr = (CreditCard *) malloc(sizeof(CreditCard) * size);
+    // calloc instead of malloc for memory optimisation
+    card_arr = (CreditCard *) calloc(size, sizeof(CreditCard));
 
     // open file
     FILE *fptr = fopen(filename, "r");

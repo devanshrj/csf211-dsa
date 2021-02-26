@@ -1,0 +1,4 @@
+Sorted 10 records in 0.001000 ms.
+Sorted 100 records in 0.019000 ms.
+Sorted 1000 records in 3.443000 ms.
+Sorted 10000 records in 151.057000 ms.
