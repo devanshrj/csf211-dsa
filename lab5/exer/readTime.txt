@@ -1,0 +1,6 @@
+Read 10 records in 0.119000 ms.
+Read 100 records in 0.572000 ms.
+Read 1000 records in 0.617000 ms.
+Read 10000 records in 7.330000 ms.
+Read 100000 records in 53.412000 ms.
+Read 1000000 records in 434.058000 ms.
