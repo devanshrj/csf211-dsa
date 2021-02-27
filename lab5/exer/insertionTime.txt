@@ -1,5 +1,9 @@
 Sorted 10 records in 0.001000 ms.
-Sorted 100 records in 0.034000 ms.
-Sorted 1000 records in 2.514000 ms.
-Sorted 10000 records in 143.027000 ms.
-Sorted 100000 records in 16687.684000 ms.
+Sorted 100 records in 0.018000 ms.
+Sorted 1000 records in 1.730000 ms.
+Sorted 5000 records in 30.037000 ms.
+Sorted 10000 records in 120.013000 ms.
+Sorted 25000 records in 751.776000 ms.
+Sorted 50000 records in 3051.899000 ms.
+Sorted 75000 records in 6748.553000 ms.
+Sorted 100000 records in 12085.191000 ms.

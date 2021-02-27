@@ -1,5 +1,9 @@
-Number of elements: 10;      Top of stack: 0x7ffee94f7144;      Bottom of stack: 0x7ffee94f7538;      Space used: 1012
-Number of elements: 100;      Top of stack: 0x7ffee94f4f84;      Bottom of stack: 0x7ffee94f7538;      Space used: 9652
-Number of elements: 1000;      Top of stack: 0x7ffee94dfe04;      Bottom of stack: 0x7ffee94f7538;      Space used: 96052
-Number of elements: 10000;      Top of stack: 0x7ffee940cf04;      Bottom of stack: 0x7ffee94f7538;      Space used: 960052
-Number of elements: 100000;      Top of stack: 0x7ffee8bcf904;      Bottom of stack: 0x7ffee94f7538;      Space used: 9600052
+Number of elements: 10;      Top of stack: 0x7ffedfd601c4;      Bottom of stack: 0x7ffedfd60518;      Space used: 852
+Number of elements: 100;      Top of stack: 0x7ffedfd5e5a4;      Bottom of stack: 0x7ffedfd60518;      Space used: 8052
+Number of elements: 1000;      Top of stack: 0x7ffedfd4cc64;      Bottom of stack: 0x7ffedfd60518;      Space used: 80052
+Number of elements: 5000;      Top of stack: 0x7ffedfcfea64;      Bottom of stack: 0x7ffedfd60518;      Space used: 400052
+Number of elements: 10000;      Top of stack: 0x7ffedfc9cfe4;      Bottom of stack: 0x7ffedfd60518;      Space used: 800052
+Number of elements: 25000;      Top of stack: 0x7ffedfb78064;      Bottom of stack: 0x7ffedfd60518;      Space used: 2000052
+Number of elements: 50000;      Top of stack: 0x7ffedf98fbe4;      Bottom of stack: 0x7ffedfd60518;      Space used: 4000052
+Number of elements: 75000;      Top of stack: 0x7ffedf7a7764;      Bottom of stack: 0x7ffedfd60518;      Space used: 6000052
+Number of elements: 100000;      Top of stack: 0x7ffedf5bf2e4;      Bottom of stack: 0x7ffedfd60518;      Space used: 8000052

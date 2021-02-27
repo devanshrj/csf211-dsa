@@ -4,7 +4,6 @@
 
 void insertInOrder(CreditCard* card_arr, CreditCard new_card, int n) {
     CreditCard card = new_card;
-    CreditCard temp;
 
     // insertion sort comparisons
    int i = n - 2;

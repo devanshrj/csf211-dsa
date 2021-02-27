@@ -15,4 +15,4 @@ void insertionTime(char* filename, char* output);
 void insertionSpace(char* filename, char* output);
 
 /* Procedure for measuring the time and space taken to perform insertion sort for multiple input files */
-void insertComp(int n);
+void insertComp();

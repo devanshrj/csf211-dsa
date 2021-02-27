@@ -2,20 +2,19 @@
 
 #include "measureTimeAndSpace.h"
 
-void insertComp(int n) {
+void insertComp() {
     // filenames for measurement outputs
     char* read = "readTime.txt";
     char* time = "insertionTime.txt";
     char* space = "insertionSpace.txt";
-    char input[15];
-    char check_str[10];
 
-    int check = 1;
-    for (int i = 0; i < n; i++) {
+    // input files
+    char input[15];
+    const char check_str[9][7] = { "10", "100", "1000", "5000", "10000", "25000", "50000", "75000", "100000" };
+
+    for (int i = 0; i < 9; i++) {
         strcpy(input, "input/");
-        check *= 10;
-        sprintf(check_str, "%d", check);
-        strcat(input, check_str);
+        strcat(input, check_str[i]);
 
         printf("Performing time and space measurements on input file %s...\n", input);
         recordTime(input, read);

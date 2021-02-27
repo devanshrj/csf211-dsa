@@ -21,7 +21,7 @@ CreditCard* readRecords(CreditCard* card_arr, char* filename, int* final_size) {
     CreditCard new;
 
     while (!feof(fptr)) {
-        fscanf(fptr,"\"%llu,%[^,],%[^,],%[^,],%[^\"]\"\n",&(new.card_no), new.bank_code, new.expiry_date, new.first_name, new.last_name);
+        fscanf(fptr,"\"%llu,%[^,],%[^,],%[^,],%[^\"]\"\n", &(new.card_no), new.bank_code, new.expiry_date, new.first_name, new.last_name);
         card_arr[i++] = new;
 
         // check size of array, reallocate if necessary
