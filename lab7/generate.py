@@ -4,7 +4,7 @@ import csv
 from random import randint
 
 def generate_nos(num_testcases, size):
-	ret_list = [long(''.join(["%s" % randint(0, 9) for _ in range(0, size)])) for _ in range(num_testcases)]
+	ret_list = [int(''.join(["%s" % randint(0, 9) for _ in range(0, size)])) for _ in range(num_testcases)]
 	return ret_list
 
 def generate_strings(num_testcases, size, flag):
@@ -39,5 +39,5 @@ def main(num_testcases):
 	write_to_file(filename, final_list)
 
 if __name__ == '__main__':
-	num_testcases = 10
+	num_testcases = 10000000
 	main(num_testcases)
