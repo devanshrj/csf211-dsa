@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "estimateCutoff.h"
 #include "hybridSort.h"
 #include "insertionSort.h"
 #include "quickSort.h"
@@ -18,21 +19,30 @@ int main() {
 	arr[8].empID = 1;
 	arr[9].empID = 33;
 
-    // printf("Initial:\n");
-	// for(int i=0;i<10;i++){
-	// 	printf("%d ",arr[i].empID);
-	// }
+	/* exer_1 test
+    printf("Initial:\n");
+	for(int i=0;i<10;i++){
+		printf("%d ",arr[i].empID);
+	}
 
-    // insertionSort(arr, 10);
-	// quickSort(arr, 10, 0);
-	// hybridSort(arr, 10, 3);
+    insertionSort(arr, 10);
+	quickSort(arr, 10, 0);
+	hybridSort(arr, 10, 3);
 
+    printf("\nSorted:\n");
+    for(int i=0;i<10;i++){
+		printf("%d ",arr[i].empID);
+	}
+	*/
+
+	/* testRun test
 	double *time = testRun(arr, 10);
     printf("Time for insertion sort: %f\n", time[0]);
     printf("Time for quick sort: %f\n", time[1]);
+	*/
 
-    // printf("\nSorted:\n");
-    // for(int i=0;i<10;i++){
-	// 	printf("%d ",arr[i].empID);
-	// }
+	// /* estimateCutoff test
+	int cutoff = estimateCutoff(arr, 10);
+	printf("Cutoff for array of size %d: %d\n", 10, cutoff);
+	// */
 }
