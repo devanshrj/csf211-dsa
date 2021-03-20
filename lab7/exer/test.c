@@ -3,6 +3,7 @@
 #include "hybridSort.h"
 #include "insertionSort.h"
 #include "quickSort.h"
+#include "testRun.h"
 
 int main() {
     Employee arr[10];
@@ -17,17 +18,21 @@ int main() {
 	arr[8].empID = 1;
 	arr[9].empID = 33;
 
-    printf("Initial:\n");
-	for(int i=0;i<10;i++){
-		printf("%d ",arr[i].empID);
-	}
+    // printf("Initial:\n");
+	// for(int i=0;i<10;i++){
+	// 	printf("%d ",arr[i].empID);
+	// }
 
     // insertionSort(arr, 10);
 	// quickSort(arr, 10, 0);
-	hybridSort(arr, 10, 3);
+	// hybridSort(arr, 10, 3);
 
-    printf("\nSorted:\n");
-    for(int i=0;i<10;i++){
-		printf("%d ",arr[i].empID);
-	}
+	double *time = testRun(arr, 10);
+    printf("Time for insertion sort: %f\n", time[0]);
+    printf("Time for quick sort: %f\n", time[1]);
+
+    // printf("\nSorted:\n");
+    // for(int i=0;i<10;i++){
+	// 	printf("%d ",arr[i].empID);
+	// }
 }
