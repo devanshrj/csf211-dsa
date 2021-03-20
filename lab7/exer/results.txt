@@ -1,0 +1,11 @@
+Time taken for size 10 with cutoff 5: 0.000000
+Time taken for size 100 with cutoff 50: 0.007000
+Time taken for size 1000 with cutoff 250: 0.171000
+Time taken for size 2500 with cutoff 312: 0.492000
+Time taken for size 5000 with cutoff 312: 1.216000
+Time taken for size 7500 with cutoff 234: 1.400000
+Time taken for size 10000 with cutoff 312: 2.249000
+Time taken for size 25000 with cutoff 390: 6.907000
+Time taken for size 50000 with cutoff 390: 13.840000
+Time taken for size 75000 with cutoff 292: 18.393000
+Time taken for size 100000 with cutoff 390: 29.567000

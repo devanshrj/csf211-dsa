@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
     strcat(input, argv[1]);
 
     FILE *fin = fopen(input, "r");
+    FILE *fout = fopen(argv[2], "w");
     FILE *res = fopen("results.txt", "a");
 
     int size = atoi(argv[1]);
@@ -36,6 +37,11 @@ int main(int argc, char *argv[]) {
 
     fprintf(res, "Time taken for size %d with cutoff %d: %f\n", size, cutoff, time);
 
+    for(int j = 0; j < size; j++) {
+        fprintf(fout, "%s %d\n", arr[j].name, arr[j].empID);
+    }
+
     fclose(fin);
+    fclose(fout);
     fclose(res);
 }
