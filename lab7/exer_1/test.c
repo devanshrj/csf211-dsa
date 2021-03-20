@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "hybridSort.h"
 #include "insertionSort.h"
 #include "quickSort.h"
 
@@ -22,7 +23,8 @@ int main() {
 	}
 
     // insertionSort(arr, 10);
-	quickSort(arr, 10, 0);
+	// quickSort(arr, 10, 0);
+	hybridSort(arr, 10, 3);
 
     printf("\nSorted:\n");
     for(int i=0;i<10;i++){
