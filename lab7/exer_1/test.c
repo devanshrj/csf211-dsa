@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "insertionSort.h"
+#include "quickSort.h"
 
 int main() {
     Employee arr[10];
@@ -20,7 +21,8 @@ int main() {
 		printf("%d ",arr[i].empID);
 	}
 
-    insertionSort(arr, 10);
+    // insertionSort(arr, 10);
+	quickSort(arr, 10, 0);
 
     printf("\nSorted:\n");
     for(int i=0;i<10;i++){
