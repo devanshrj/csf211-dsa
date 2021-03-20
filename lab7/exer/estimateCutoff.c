@@ -1,3 +1,5 @@
+#include <assert.h>
+#include <stdio.h>
 #include "estimateCutoff.h"
 
 double diff(double a, double b) {
@@ -10,16 +12,8 @@ int estimateCutoff(Employee *Ls, int size) {
 
     int min = 0, max = size;
     int mid;
-
-    tt = testRun(Ls, min);
-    if (tt[0] >= tt[1])
-        return min;
     
-    tt = testRun(Ls, max);
-    if (tt[0] <= tt[1])
-        return max;
-
-    while (diff(tt[0], tt[1]) > 0.4) {
+    do {
         mid = (min + max) / 2;
         tt = testRun(Ls, mid);
         
@@ -27,7 +21,7 @@ int estimateCutoff(Employee *Ls, int size) {
             min = mid;
         else
             max = mid;
-    } 
+    } while (diff(tt[0], tt[1]) > 0.1);
 
     return mid;
 }

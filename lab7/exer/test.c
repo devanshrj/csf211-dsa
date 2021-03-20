@@ -7,17 +7,28 @@
 #include "testRun.h"
 
 int main() {
-    Employee arr[10];
-	arr[0].empID = 2;
-	arr[1].empID = 3;
-	arr[2].empID = 6;
-	arr[3].empID = 10;
-	arr[4].empID = 5;
-	arr[5].empID = 4;
-	arr[6].empID = 3;
-	arr[7].empID = 2;
-	arr[8].empID = 1;
-	arr[9].empID = 33;
+    // Employee arr[10];
+	// arr[0].empID = 2;
+	// arr[1].empID = 3;
+	// arr[2].empID = 6;
+	// arr[3].empID = 10;
+	// arr[4].empID = 5;
+	// arr[5].empID = 4;
+	// arr[6].empID = 3;
+	// arr[7].empID = 2;
+	// arr[8].empID = 1;
+	// arr[9].empID = 33;
+
+	FILE *fin = fopen("input/50000", "r");
+
+    int size = 50000;
+    Employee arr[size];
+    int i = 0;
+
+    while(!feof(fin)){
+        fscanf(fin, "%[^ ] %d\n", arr[i].name, &arr[i].empID);
+        i++;
+    }
 
 	/* exer_1 test
     printf("Initial:\n");
@@ -35,14 +46,14 @@ int main() {
 	}
 	*/
 
-	/* testRun test
-	double *time = testRun(arr, 10);
+	// /* testRun test
+	double *time = testRun(arr, size);
     printf("Time for insertion sort: %f\n", time[0]);
     printf("Time for quick sort: %f\n", time[1]);
-	*/
+	// */
 
 	// /* estimateCutoff test
-	int cutoff = estimateCutoff(arr, 10);
-	printf("Cutoff for array of size %d: %d\n", 10, cutoff);
+	int cutoff = estimateCutoff(arr, size);
+	printf("Cutoff for array of size %d: %d\n", size, cutoff);
 	// */
 }

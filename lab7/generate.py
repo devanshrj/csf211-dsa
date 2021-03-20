@@ -39,5 +39,5 @@ def main(num_testcases):
 	write_to_file(filename, final_list)
 
 if __name__ == '__main__':
-	num_testcases = 10000000
+	num_testcases = 2500
 	main(num_testcases)

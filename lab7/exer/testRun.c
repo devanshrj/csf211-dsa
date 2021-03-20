@@ -16,18 +16,18 @@ double *testRun(Employee *Ls, int size) {
 	double elapsedTime;
 
 	gettimeofday(&t1, NULL);
-	insertionSort(Ls, size);
+	insertionSort(arr1, size);
 	gettimeofday(&t2, NULL);
 	elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;
 	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;
     time[0] = elapsedTime;
 
     gettimeofday(&t1, NULL);
-	quickSort(Ls, size, 0);
+	quickSort(arr2, size, 0);
 	gettimeofday(&t2, NULL);
 	elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;
 	elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;
-    time[0] = elapsedTime;
+    time[1] = elapsedTime;
 
     return time;
 }
