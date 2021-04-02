@@ -1,6 +1,6 @@
 #include "collision.h"
 
-int collisionCount(wchar_t* array[], int len, int baseNumber, int tableSize) {
+int collisionCount(wchar_t **array, int len, int baseNumber, int tableSize) {
     int collisions = 0, hash;
 
     int *hashes = (int *) calloc(tableSize, sizeof(int));
