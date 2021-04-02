@@ -3,7 +3,7 @@
 #include "profiler.h"
 
 int main() {
-    char* file = "test_input.txt";
+    char* file = "aliceinwonderland.txt";
     int size;
 
     wchar_t** book = parser(file, &size);

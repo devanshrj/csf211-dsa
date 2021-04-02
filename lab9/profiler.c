@@ -24,6 +24,6 @@ void profiler(wchar_t **book, int size) {
         }
     }
 
-    printf("Best index for baseNumber: (%d, %d) = %d\n", best_i, best_j, collisions[best_i][best_j]);
-    printf("Best index for tableSize: %d = %d\n", best_i, collisions[best_i][best_j]);
+    printf("Best index for baseNumber: (%d, %d) = %d\n", best_i, best_j, baseNumber[best_i][best_j]);
+    printf("Best index for tableSize: %d = %d\n", best_i, tableSize[best_i]);
 }
