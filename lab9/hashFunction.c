@@ -1,12 +1,13 @@
 #include "hashFunction.h"
 
-int hashFunction(char* string, int baseNumber, int tableSize) {
+int hashFunction(wchar_t* string, int baseNumber, int tableSize) {
     int myHash = 0;
 
-    for (char c = s[0], int i = 0; c != '\0'; i++) {
-        myHash += c;
-        c = s[i];
+    for (int i = 0; i < wcslen(string); i++) {
+        myHash += string[i];
+        myHash %= baseNumber;
     }
 
-    return ((myHash % baseNumber) % tableSize);
+    myHash %= tableSize;
+    return myHash;
 }

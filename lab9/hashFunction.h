@@ -1,1 +1,3 @@
-int hashFunction(char* string, int baseNumber, int tableSize);
+#include <wchar.h>
+
+int hashFunction(wchar_t* string, int baseNumber, int tableSize);
