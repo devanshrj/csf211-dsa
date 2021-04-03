@@ -7,6 +7,15 @@ int collisionCount(wchar_t **array, int len, int baseNumber, int tableSize) {
 
     // increase the value of index hash in hashes (represents hash table) by 1
     for (int i = 0; i < len; i++) {
+        // check if string is unique
+        int unique = 1;
+        for (int j = 0; j < i - 1; j++) {
+            if (!wcscmp(array[i], array[j]))
+                unique = 0;
+        }
+        if (!unique)
+            continue;
+        
         hash = hashFunction(array[i], baseNumber, tableSize);
         hashes[hash]++;
 

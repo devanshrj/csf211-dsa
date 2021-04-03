@@ -26,6 +26,15 @@ int collisionCount(wchar_t **array, int len, int baseNumber, int tableSize) {
 
     // increase the value of index hash in hashes (represents hash table) by 1
     for (int i = 0; i < len; i++) {
+        // check if string is unique
+        int unique = 1;
+        for (int j = 0; j < i - 1; j++) {
+            if (!wcscmp(array[i], array[j]))
+                unique = 0;
+        }
+        if (!unique)
+            continue;
+        
         hash = hashFunction(array[i], baseNumber, tableSize);
         hashes[hash]++;
 
@@ -195,10 +204,23 @@ int lookupAll(wchar_t **book, int size, HashTable *myHash, double m) {
     myHash->queryingCost = 0;
 
     for (int i = 0; i < (int)(size * m); i++) {
-        lookup(book, i, myHash);
+        lookup(book, i % (size - 1), myHash);
     }
 
     return myHash->queryingCost;
+}
+
+
+/*
+Exercise 3
+*/
+
+double lookupProfile(wchar_t **book, int size, HashTable *myHash) {
+    for (double m = 0; m < 2.0; m += 0.1) {
+        if (lookupAll(book, size, myHash, m) > myHash->insertionCost)
+            return m;
+    }
+    return 2.0;
 }
 
 
@@ -217,11 +239,14 @@ int main(int argc, char* argv[]) {
     int size;
     wchar_t **book = parser(argv[1], &size);
 
-    printf("\nPerforming hash table operations...\n");
+    printf("\nExecuting hash table operations...\n");
 
     // hardcoded tableSize = 50000, baseNumber = 50021, collisions = 28066
     HashTable *myHash = newHashTable(50000, 50021);
     printf("Total Insertion Cost: %d\n", insertAll(book, size, myHash));
     printf("Element Count: %d\n", myHash->elementCount);
     printf("Total Querying Cost: %d\n", lookupAll(book, size, myHash, 1));
+
+    printf("\nExecuting lookup profile...\n");
+    printf("Value of m required: %f\n", lookupProfile(book, size, myHash));
 }
